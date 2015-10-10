@@ -14,4 +14,8 @@ router.get('/read/:id', function(req, res, next ){
   res.send('read id is ' + req.params.id);
 });
 
+router.get('/:action/:id', function(req, res, next ){
+  res.send(req.params.action +' is ' + req.params.id);
+});
+
 module.exports = router;
