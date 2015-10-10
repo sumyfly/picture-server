@@ -6,4 +6,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/1', function(req, res, next ){
+  res.send('this is 1');
+});
+
+router.get('/read/:id', function(req, res, next ){
+  res.send('read id is ' + req.params.id);
+});
+
 module.exports = router;
