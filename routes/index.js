@@ -18,4 +18,23 @@ router.get('/:action/:id', function(req, res, next ){
   res.send(req.params.action +' is ' + req.params.id);
 });
 
+router.get('/login', function(req, res, next){
+  res.render('login', {title: '用户登录'});
+});
+
+router.post('/login', function(req, res, next){
+  var user={
+    username:'admin',
+    password:'admin'
+   }
+  if(req.body.username===user.username && req.body.password===user.password){
+  res.redirect('/home');
+  }
+  res.redirect('/login');
+});
+
+router.get('/logout', function(req, res, next){
+  res.redirect('/');
+});
+
 module.exports = router;
