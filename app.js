@@ -7,6 +7,9 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+//guid-generator
+var id = require('./public/js/util/guid')
+
 
 var app = express();
 
