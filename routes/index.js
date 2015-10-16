@@ -12,9 +12,7 @@ router.get('/1', function(req, res, next ){
 });
 
 router.get('/guid', function(req, res, next){
-  var g = guid();
-  var str = g();
-  res.send('guid is ' + str);
+  res.send('guid is ' + guid().create());
 });
 
 router.get('/read/:id', function(req, res, next ){
