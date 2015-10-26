@@ -33,7 +33,8 @@ router.post('/login', function(req, res, next){
     password:'admin'
    }
   if(req.body.username===user.username && req.body.password===user.password){
-  res.redirect('/home');
+  res.send('home:'+req.body.username);
+  //res.redirect('/home.html');
   }
   res.redirect('/login');
 });
