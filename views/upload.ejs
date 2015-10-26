@@ -12,14 +12,20 @@
       <%= error %> 
     </div> 
     <% } %> 
-
-    <form class="form-signin" role="form" method="post" enctype='multipart/form-data'>
-    <h2 class="form-signin-heading">上传文件</h2>
-    <input id="fulAvatar" name="fulAvatar" type="file" class="form-control" />	 
-    <br/>
-    <button id="btnSub" class="btn btn-lg btn-primary" type="submit">上 传</button>
+    
+	<div class="row clearfix">
+		<div class="col-md-12 column">
+    <form role="form" method="post" enctype='multipart/form-data'>
+    
+      <div class="form-group">
+        <label for="fulAvatar">上传图片</label>
+        <input id="fulAvatar" type="file" name="fulAvatar" />
+      </div> 
+      <button id="btnSub" class="btn btn-lg btn-primary" type="submit">上 传</button>
     </form>
-      
+   </div>
+  </div> 
+  
  </div> 
   
  <script type="text/javascript">
