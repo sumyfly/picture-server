@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <title>图片详情</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/templatemo-style.css">
+</head>
+
+<body>
+
+            <!-- MAIN POSTS -->
+            <div class="main-posts">
+                <div class="container">
+                    <div class="row">
+                        <div class="blog-masonry masonry-true">
+
+                            <% images.forEach(function(b,index){ %>
+                                <div class="post-masonry col-md-4 col-sm-6">
+                                    <div class="post-thumb">
+                                        <img data-id="<%= index %>" src="<%= b.substring(8) %>"  />
+                                        <div class="title-over">
+                                            <h4><a href="#"><%= b %></a><h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <% }); %>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script src="/js/jquery.min.js"></script>
+            <script src="/js/plugins.js"></script>
+            <script src="/js/main.js"></script>
+</body>
+
+</html>

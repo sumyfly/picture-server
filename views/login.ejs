@@ -1,27 +1,33 @@
-<% include header.ejs %>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title><%= title %></title>
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel='stylesheet' href='/css/style.css' />
+<link rel='stylesheet' href='/css/login.css' />
+<link rel='stylesheet' href='/css/justified-nav.css'>
+<link rel='stylesheet' href='/css/sticky-footer-navbar.css'>
+</head>
+<body>
+     <div class="container">
+        <form class="form-signin" method="post">
+            <h2 class="form-sign-heading">请登录</h2>
+            <label for="name" class="sr-only">name</label>
+            <input type="username" id="username" class="form-control" name="username" placeholder="用户名" required autofocus>
+            <label for="passsword" class="sr-only">password</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+    </div>
 
-<div class="container-fluid">
-<form class="form-horizontal" method="post">
-<fieldset>
-<legend>用户登陆</legend>
-<div class="control-group">
-<label class="control-label" for="username">用户名</label>
-<div class="controls">
-<input type="text" class="input-xlarge" id="username" name="username">
-</div>
-</div>
-<div class="control-group">
-<label class="control-label" for="password">密码</label>
-<div class="controls">
-<input type="password" class="input-xlarge" id="password" name="password">
-</div>
-</div>
-<div class="form-actions">
-			<button type="submit" class="btn btn-primary" onclick="onClickLogin()">登陆</button>
-</div>
-</fieldset>
-</form>
-</div>
+    <script src="/js/ui.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 
-<script src="/js/ui.js"></script>
-<% include footer.ejs %>
+      <!-- Site footer -->
+      <footer class="footer">
+        <p>&copy; Company 2015</p>
+      </footer>
+   </div> <!-- /container -->
+</body>
+</html>

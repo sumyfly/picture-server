@@ -1,0 +1,13 @@
+<% include header.ejs %>
+    <div>
+    <ul>
+    <% folders.forEach(function(b,index){ %>
+    <li>
+        <label><%= b.substring(14  ) %></labe>
+        <a href=/upload/getpicture/<%= b.substring(14) %> target='_blank'>查看此目录</a>
+        <a href=/upload/delete/<%= b.substring(14) %> >删除此目录</a>
+    </li>
+	<% }); %>
+    </ul>
+    </div>
+<% include footer.ejs %>

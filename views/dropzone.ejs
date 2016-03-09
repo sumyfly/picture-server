@@ -1,0 +1,10 @@
+<% include header.ejs %>
+    <div>
+        <label >当前上传目录： public/adv/<%= date %></label>
+    </div>
+  	<div id="dropz"></div>
+    <form action="/upload"
+      class="dropzone"
+      id="my-awesome-dropzone">
+    </form>
+<% include footer.ejs %>
